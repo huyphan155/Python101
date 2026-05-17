@@ -5,3 +5,20 @@ Day1 :
     print
     input
 task : convert temp, average, parse simple string.
+
+Day2:
+    if / else
+    for
+    while
+    function
+task: check log contain error, count number of appear, simple CLI menu
+
+##
+for char in "UART":
+    print(char)
+
+for i in range(1, 6):
+    print(i) -> 1,2,3,4,5
+
+if "ERROR" in "ERROR: UART timeout":
+        print("Found ERROR")
