@@ -1,0 +1,7 @@
+Day1 :
+    variable
+    string
+    int/float/bool
+    print
+    input
+task : convert temp, average, parse simple string.
