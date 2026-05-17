@@ -22,3 +22,10 @@ for i in range(1, 6):
 
 if "ERROR" in "ERROR: UART timeout":
         print("Found ERROR")
+
+Day3:
+    list = [ "struct", ]
+    dict { "level": "ERROR", }
+    tuple ( "immutable" )   ( = list but immutable )
+    set  {"Error", "Error" }  => no duplicate => print(set) = Error
+task: parse log to dictionary, message frequency
