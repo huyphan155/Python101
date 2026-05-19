@@ -5,34 +5,39 @@
 # ERROR: UART timeout
 # WARNING: Low battery
 # ERROR: CAN time out
-
+# {'ERROR': 2, 'WARNING': 1}
 
 from pathlib import Path
 
-path = Path("logs.txt")
+input_path = Path("logs.txt")
+new_path = Path("filtered_logs.txt")
+
+counter = {
+    "ERROR":0,
+    "WARNING":0
+}
 
 try:
     # open input file
-    file = open(path, "r")
+    file = open(input_path, "r")
     # open output file
-    file_new = open("filtered_logs.txt", "w")
+    file_new = open(new_path, "w")
 
     for line in file:
-        if "ERROR" in line or "WARNING" in line:
+        if "ERROR" in line:
+            counter["ERROR"] += 1
+            print(line.strip())
             file_new.write(line)
+
+        if "WARNING" in line:
+            print(line.strip())
+            file_new.write(line)
+            counter["WARNING"] += 1
+
+    print(counter)
 
     file.close()
     file_new.close()
 
-    file_new = open("filtered_logs.txt", "r")
-    # take data from new file
-    data_new = file_new.read()
-
-    print(data_new)
-
-    # close files
-
-    file_new.close()
-
-except:
-    print("Error")
+except Exception as e:
+    print(e)
