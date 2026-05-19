@@ -1,17 +1,21 @@
+Week1.
+
 Day1 :
     variable
     string
     int/float/bool
     print
     input
-task : convert temp, average, parse simple string.
+
+TASK : convert temp, average, parse simple string.
 
 Day2:
     if / else
     for
     while
     function
-task: check log contain error, count number of appear, simple CLI menu
+
+TASK: check log contain error, count number of appear, simple CLI menu
 
 ##
 for char in "UART":
@@ -28,4 +32,18 @@ Day3:
     dict { "level": "ERROR", }
     tuple ( "immutable" )   ( = list but immutable )
     set  {"Error", "Error" }  => no duplicate => print(set) = Error
-task: parse log to dictionary, message frequency
+
+TASK: parse log to dictionary, message frequency
+
+Week2.
+
+Day1:
+    open / read / write file
+    pathlib
+    exception
+
+file = open("logs.txt", "r") / data = file.read() / file.write("Hello Python")
+
+
+
+TASK : read log file, filter WARNING / ERROR, export new file

@@ -1,0 +1,3 @@
+ERROR: UART timeout
+WARNING: Low battery
+ERROR: CAN timeout
