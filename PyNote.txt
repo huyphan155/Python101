@@ -52,3 +52,10 @@ Day2:
     virtualenv
 
 Task: package install, use package, read simple COM port (pyserial)
+
+Day3:
+    regex # import re
+    argparse
+    logging
+
+Task: Parse log with Regex, CLI receive input file, write log to file
