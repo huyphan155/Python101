@@ -44,6 +44,11 @@ Day1:
 
 file = open("logs.txt", "r") / data = file.read() / file.write("Hello Python")
 
-
-
 TASK : read log file, filter WARNING / ERROR, export new file
+
+Day2:
+    import
+    pip
+    virtualenv
+
+Task: package install, use package, read simple COM port (pyserial)
