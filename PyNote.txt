@@ -54,8 +54,17 @@ Day2:
 Task: package install, use package, read simple COM port (pyserial)
 
 Day3:
-    regex # import re
-    argparse
-    logging
+    regex      # import re
+    argparse   # import argparse
+    logging    # import logging
 
 Task: Parse log with Regex, CLI receive input file, write log to file
+
+Week3:
+
+Day1: script → structured data
+    class
+    object
+    dataclass
+
+Task: Log entry class, parser return object, list object + frequency

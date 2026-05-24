@@ -7,7 +7,7 @@
       <excludeFolder url="file://$MODULE_DIR$/Week1/.venv" />
       <excludeFolder url="file://$MODULE_DIR$/Week2/.venv" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.11 (Python101) (2)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.9 (Python101)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>
