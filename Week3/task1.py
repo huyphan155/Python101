@@ -87,13 +87,28 @@ print("\nFrequency:", frequency)
 class ErrorLog(LogEntry):
     error_code: int
 
+    def show(self):
+        print(
+            f"[ERROR] {self.message}"
+        )
+
 @dataclass
 class InfoLog(LogEntry):
     pass
 
+    def show(self):
+        print(
+            f"[INFO] {self.message}"
+        )
+
 @dataclass
 class WarningLog(LogEntry):
     pass
+
+    def show(self):
+        print(
+            f"[WARNING] {self.message}"
+        )
 
 
 class LogManager:
@@ -135,6 +150,7 @@ print(logWarning)
 frequencyD2 = {}
 
 for line in manager.get_logs():
+    line.show()
     level = line.level
     if level not in frequencyD2:
         frequencyD2[level] = 1
