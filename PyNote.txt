@@ -136,6 +136,15 @@ Tasks:
 - ErrorLog(LogEntry)
 - InfoLog(LogEntry)
 
+Day 3:
+------------------
+Topics:
+- Polymorphism
+- Project split (models.py, parser.py, manager.py, main.py)
+
+Tasks:
+- Project split (models.py, parser.py, manager.py, main.py)
+
 ===============================================================================================
                                             WEEK 4
 ===============================================================================================
@@ -143,8 +152,30 @@ Tasks:
 Day 1:
 ------------------
 Topics:
--
--
--
+- JSON ( similar with dict in python )
+- serialize / deserialize : json.dumps(data) / json.loads(json_data)
+- R/W JSON file
+
+DIFF:
+    JSON: true - null
+    Python: True - None
+
+SERIALIZE : Python object → JSON
+    import json
+    data = {
+        "level":"ERROR",
+        "message":"UART timeout"
+    }
+    json_data = json.dumps(data) # {"level":"ERROR","message":"UART timeout"}
+
+DESERIALIZE : JSON → Python
+    json_data = """
+    {
+        "level":"ERROR",
+        "message":"UART timeout"
+    }
+    """
+    data = json.loads(json_data) # {'level':'ERROR', 'message':'UART timeout' }
+
 
 Tasks:

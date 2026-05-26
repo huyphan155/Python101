@@ -1,0 +1,5 @@
+{
+    "level": "ERROR",
+    "message": "UART timeout",
+    "error_code": 1001
+}
