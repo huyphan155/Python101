@@ -125,6 +125,17 @@ Tasks:
 - Store list of objects
 - Count frequency
 
+Day 2:
+------------------
+Topics:
+- inheritance
+- composition
+- project structure
+
+Tasks:
+- ErrorLog(LogEntry)
+- InfoLog(LogEntry)
+
 ===============================================================================================
                                             WEEK 4
 ===============================================================================================

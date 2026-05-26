@@ -82,9 +82,64 @@ print(logs)
 # show the Frequency data
 print("\nFrequency:", frequency)
 
+#D2_Task1
+@dataclass
+class ErrorLog(LogEntry):
+    error_code: int
+
+@dataclass
+class InfoLog(LogEntry):
+    pass
+
+@dataclass
+class WarningLog(LogEntry):
+    pass
 
 
+class LogManager:
+    def __init__(self):
+        self.logs = []
+
+    def add_log(self, log):
+        self.logs.append(log)
+
+    def get_logs(self):
+        return self.logs
+
+manager = LogManager()
 
 
+logError = ErrorLog(
+    level="ERROR",
+    message="UART timeout",
+    error_code=1001
+)
+manager.add_log(logError)
 
+logInfo = InfoLog(
+    level="INFO",
+    message="Boot success",
+)
+manager.add_log(logInfo)
 
+logWarning = WarningLog(
+    level="WARNING",
+    message="Low battery",
+)
+manager.add_log(logWarning)
+
+print(logError)
+print(logInfo)
+print(logWarning)
+
+frequencyD2 = {}
+
+for line in manager.get_logs():
+    level = line.level
+    if level not in frequencyD2:
+        frequencyD2[level] = 1
+    else:
+        frequencyD2[level] += 1
+
+# show the frequencyD2 data
+print("\nfrequencyD2:", frequencyD2)
