@@ -1,0 +1,3 @@
+ERROR: UART timeout
+INFO: Boot success
+WARNING: Low battery

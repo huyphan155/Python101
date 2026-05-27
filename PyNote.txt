@@ -178,4 +178,22 @@ DESERIALIZE : JSON → Python
     data = json.loads(json_data) # {'level':'ERROR', 'message':'UART timeout' }
 
 
-Tasks:
+Tasks: Working with JSON
+
+Day 2:
+------------------
+Topics:
+- HTTP
+- REST API
+- requests
+- GET
+- POST
+
+HTTP: Communication between client and server.
+    Python script
+        ↓
+    GET https://api.site.com/logs
+        ↓
+    Server
+        ↓
+    JSON response
