@@ -3,3 +3,7 @@
 
 # pycharm
 .idea/
+
+# pycache by compiler
+__pycache__/
+*.pyc
