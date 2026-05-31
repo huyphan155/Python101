@@ -215,3 +215,20 @@ Topics: simple log pipeline
         upload frequency
             ↓
         upload all logs
+
+===============================================================================================
+                                            WEEK 5
+===============================================================================================
+
+Day 1:
+------------------
+Topics:
+- what is UV, poetry?
+- pip
+- virtualenv (.venv)
+- requirements.txt
+- vì sao cần môi trường ảo
+
+pip freeze > requirements.txt
+print(requests.__version__)
+print(requests.__file__)
