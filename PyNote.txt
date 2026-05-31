@@ -232,3 +232,34 @@ Topics:
 pip freeze > requirements.txt
 print(requests.__version__)
 print(requests.__file__)
+
+
+Day 1: UV
+------------------
+install : powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+Check   : uv --version
+
+# Create new folder and install with uv
+mkdir uv_demo
+cd uv_demo
+uv init
+uv add requests
+
+(.venv) PS D:\GitWork\Python101\uv_demo> pip freeze
+certifi==2026.5.20
+charset-normalizer==3.4.7
+idna==3.16
+pyserial==3.5
+requests==2.34.2
+urllib3==2.7.0
+
+(.venv) PS D:\GitWork\Python101\uv_demo> uv tree
+Resolved 6 packages in 1ms
+uv-demo v0.1.0
+└── requests v2.34.2
+    ├── certifi v2026.5.20
+    ├── charset-normalizer v3.4.7
+    ├── idna v3.17
+    └── urllib3 v2.7.0
+
+only install requests but got all the dependency, uv show tree make us understand the dependency
