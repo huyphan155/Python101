@@ -197,3 +197,21 @@ HTTP: Communication between client and server.
     Server
         ↓
     JSON response
+
+Day 3:
+------------------
+Topics: simple log pipeline
+
+        logs.txt
+            ↓
+        parse_log()
+            ↓
+        LogManager
+            ↓
+        count_frequency()
+            ↓
+        result.json
+            ↓
+        upload frequency
+            ↓
+        upload all logs
