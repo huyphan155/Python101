@@ -234,7 +234,7 @@ print(requests.__version__)
 print(requests.__file__)
 
 
-Day 1: UV
+Day 2: UV
 ------------------
 install : powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 Check   : uv --version
@@ -263,3 +263,18 @@ uv-demo v0.1.0
     └── urllib3 v2.7.0
 
 only install requests but got all the dependency, uv show tree make us understand the dependency
+
+Day 3: package, module
+
+Week5/
+│
+├── main.py
+│
+└── logtool/
+    ├── __init__.py
+    ├── parser.py
+    ├── models.py
+    └── ...
+
+outSite package (main.py ) : from logtool.models import ErrorLog
+inside package  (parser.py) : from .models import ErrorLog
