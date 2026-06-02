@@ -1,0 +1,5 @@
+ERROR: UART timeout
+UART timeout
+INFO: Boot success
+WARNING: Low battery
+ERROR: CAN timeout

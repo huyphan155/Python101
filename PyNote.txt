@@ -177,6 +177,8 @@ DESERIALIZE : JSON → Python
     """
     data = json.loads(json_data) # {'level':'ERROR', 'message':'UART timeout' }
 
+Phan biet : json.loads() (Text in json format) vs json.load() ( file object )
+
 
 Tasks: Working with JSON
 
@@ -265,6 +267,7 @@ uv-demo v0.1.0
 only install requests but got all the dependency, uv show tree make us understand the dependency
 
 Day 3: package, module
+---------------------
 
 Week5/
 │
@@ -278,3 +281,23 @@ Week5/
 
 outSite package (main.py ) : from logtool.models import ErrorLog
 inside package  (parser.py) : from .models import ErrorLog
+
+===============================================================================================
+                                            WEEK 6
+===============================================================================================
+
+Task 1: Exception Handling
+------------------
+-
+try:
+    print("work")
+except:
+    print("error")
+finally:                                  # always run
+    print("always run")
+
+-
+try:
+    ...
+except Exception as e:
+    print(e)
