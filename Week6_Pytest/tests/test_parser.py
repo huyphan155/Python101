@@ -1,19 +1,6 @@
 import pytest
 
 from apps.parser import parse_log
-from apps.models import ErrorLog
-
-@pytest.fixture
-def sample_error_log():
-    return "ERROR: UART timeout"
-
-@pytest.fixture
-def sample_error_object():
-    return ErrorLog(
-        level="ERROR",
-        message="UART timeout",
-        error_code=1001
-    )
 
 def test_parse_log_ok(sample_error_log):
     log = parse_log(sample_error_log)
