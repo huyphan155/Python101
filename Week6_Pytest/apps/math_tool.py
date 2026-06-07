@@ -7,4 +7,4 @@ def get_number():
     return 10
 
 def calculate():
-    return get_number() * 2
+    return get_number() + get_number()
