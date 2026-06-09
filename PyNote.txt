@@ -305,6 +305,10 @@ except Exception as e:
 Task 2: Pytest + mock
 ------------------
 
+open cmd and run : pytest
+    - py test work by collect all the name with "test_*.py / *_test.py" in the folder
+    - inside def must have format:
+            def test_abc():
 
 ===============================================================================================
                                             WEEK 6
