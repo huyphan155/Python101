@@ -1,8 +1,17 @@
 [project]
 name = "week8-packaging"
 version = "0.1.0"
-description = "Add your description here"
 requires-python = ">=3.9"
+
 dependencies = [
     "typer>=0.23.2",
 ]
+#logtool
+#   ↓
+#logtool_W8.cli
+#   ↓
+#app
+#
+# equal  from logtool_W8.cli import app + app()
+[project.scripts]
+logtool = "logtool_W8.cli:app"

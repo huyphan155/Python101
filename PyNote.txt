@@ -362,3 +362,33 @@ Typer auto generate doc => ADVANCE
     │ --upper    --no-upper      [default: no-upper]                                                                                                  │
     │ --help                     Show this message and exit.
     ╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+
+___________________________________________________________________________________________
+ADD to pyproject.toml
+
+    [project.scripts]
+    logtool = "logtool_W8.cli:app"
+
+then Run : pip install -e .
+-> pip create : .venv\Scripts\logtool.exe
+
+So when user type : logtool hello ( equal : from logtool_W8.cli import app + app() )
+
+
+(.venv) PS D:\GitWork\Python101\Week8_packaging> logtool --help
+
+ Usage: logtool [OPTIONS] COMMAND [ARGS]...
+
+╭─ Options ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ --install-completion          Install completion for the current shell.                                                                         │
+│ --show-completion             Show completion for the current shell, to copy it or customize the installation.                                  │
+│ --help                        Show this message and exit.                                                                                       │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Commands ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ hello                                                                                                                                           │
+│ greet                                                                                                                                           │
+│ show-config                                                                                                                                     │
+│ add                                                                                                                                             │
+│ repeat                                                                                                                                          │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯

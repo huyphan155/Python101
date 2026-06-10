@@ -1,7 +1,0 @@
-pyproject.toml
-src/logtool/__init__.py
-src/logtool/parser.py
-src/week8_packaging.egg-info/PKG-INFO
-src/week8_packaging.egg-info/SOURCES.txt
-src/week8_packaging.egg-info/dependency_links.txt
-src/week8_packaging.egg-info/top_level.txt
