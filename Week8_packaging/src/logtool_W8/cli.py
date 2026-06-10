@@ -1,7 +1,37 @@
 import typer
+from . import VERSION
+from .parser import parse_log
+from .manager import LogManager
 
 app = typer.Typer()
 
+@app.command()
+def version():
+    print(f"LogTool version {VERSION}")
+
+@app.command()
+def parse(path: str):
+    with open(path, "r") as file:
+        for line in file:
+            log = parse_log(line)
+            print(f"{log.level}: {log.message}"            )
+
+@app.command()
+def stats(path: str):
+    manager = LogManager()
+
+    with open(path, "r") as file:
+        for line in file:
+            log = parse_log(line)
+            manager.add_log(log)
+
+    frequency = manager.count_frequency()
+
+    for level, count in frequency.items():
+        print(f"{level}: {count}")
+
+
+# dumb command for learning
 @app.command()
 def hello():
     print("Hello World")
