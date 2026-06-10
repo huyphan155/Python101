@@ -5,10 +5,13 @@
       <sourceFolder url="file://$MODULE_DIR$/.venv/lib/python3.11/site-packages" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Week5" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Week6_Pytest" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Week8_packaging/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Week8_packaging" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/.venv" />
       <excludeFolder url="file://$MODULE_DIR$/uv_demo/.venv" />
+      <excludeFolder url="file://$MODULE_DIR$/Week8_packaging/.venv" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.9 (Python101)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.11 (Python101) (5)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>

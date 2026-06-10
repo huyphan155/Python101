@@ -328,3 +328,37 @@ Packaging
 CLI Tool
 Typer
 Project Structure
+
+Command
+- normal command ( only Argument )
+    @app.command()
+    def hello():
+        print("Hello World")
+- Option
+    @app.command()
+    def greet(
+        name: str = typer.Argument(...),
+        upper: bool = typer.Option(False)
+    ):
+        if upper:
+            print(name.upper())
+        else:
+            print(name)
+
+=> run python cli.py greet --help
+
+Typer auto generate doc => ADVANCE
+
+   ex :
+
+    (.venv) PS D:\GitWork\Python101\Week8_packaging> python cli.py greet --help
+
+     Usage: cli.py greet [OPTIONS] NAME
+
+    ╭─ Arguments ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+    │ *    name      TEXT  [required]                                                                                                                 │
+    ╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+    ╭─ Options ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+    │ --upper    --no-upper      [default: no-upper]                                                                                                  │
+    │ --help                     Show this message and exit.
+    ╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
