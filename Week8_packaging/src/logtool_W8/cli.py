@@ -2,6 +2,7 @@ import typer
 from . import VERSION
 from .parser import parse_log
 from .manager import LogManager
+from .api_client import upload_log
 
 app = typer.Typer()
 
@@ -29,6 +30,8 @@ def stats(path: str):
 
     for level, count in frequency.items():
         print(f"{level}: {count}")
+
+    upload_log(frequency)
 
 
 # dumb command for learning
