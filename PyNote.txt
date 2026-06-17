@@ -311,7 +311,7 @@ open cmd and run : pytest
             def test_abc():
 
 ===============================================================================================
-                                            WEEK 6
+                                            WEEK 6 - 7
 ===============================================================================================
 
 Task 1:
@@ -392,3 +392,98 @@ So when user type : logtool hello ( equal : from logtool_W8.cli import app + app
 │ add                                                                                                                                             │
 │ repeat                                                                                                                                          │
 ╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+===============================================================================================
+                               Week 9 — Logging & Configuration
+===============================================================================================
+logger
+    DEBUG : logger.debug(f"Input path = {path}")
+    INFO  : logger.info("Program started")
+    WARNING : logger.warning("Battery low")
+    ERROR : logger.error("Upload failed")
+    CRITICAL : logger.critical("Database corrupted")
+handler
+formatter
+file handler
+console handler
+log level
+
+    ex :
+def setup_logger():
+    # create logger name 'logtool'
+    logger = logging.getLogger("logtool")
+
+    # setup level to INFO
+    logger.setLevel(logging.INFO)
+
+    # avoid duplicate
+    if not logger.handlers:
+        # "Formatter"
+        formatter = logging.Formatter("[%(asctime)s] [%(levelname)s] - %(message)s", datefmt="%Y-%m-%d %H:%M:%S")
+
+        # "Handler 1" for Terminal (StreamHandler)
+        console_handler = logging.StreamHandler()
+        console_handler.setFormatter(formatter)
+        logger.addHandler(console_handler)
+
+        # "Handler 2" for write to 'tool.log' (FileHandler)
+        file_handler = logging.FileHandler("tool.log", encoding="utf-8")
+        file_handler.setFormatter(formatter)
+        logger.addHandler(file_handler)
+
+    return logger
+
+Config
+├── config.json
+├── load_config()
+
+Environment
+├── os.getenv()
+├── .env
+├── python-dotenv
+
+===============================================================================================
+                                   Week 10 — Async Python
+===============================================================================================
+async def
+await
+asyncio.run()
+asyncio.gather()
+
+what is different between "def" and "async def"?
+what "await" is truly do ?
+
+ex :
+    import asyncio
+
+    async def task1():
+        print("Task1 Start")
+
+        await asyncio.sleep(5)
+
+        print("Task1 Done")
+
+    async def task2():
+        print("Task2 Start")
+
+        await asyncio.sleep(5)
+
+        print("Task2 Done")
+
+    async def main():
+        await asyncio.gather(
+            task1(),
+            task2()
+        )
+
+    asyncio.run(main())
+
+( await : 1 thread manage by event loop ) # multi thread
+
+Async Function = Normal Function + can WAIT
+
+Purpose of async :
+    HTTP Request
+    Database
+    Message Queue
+    WebSocket
