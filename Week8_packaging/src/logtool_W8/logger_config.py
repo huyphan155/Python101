@@ -1,11 +1,28 @@
 import logging
+from .config_loader import load_config
 
 def setup_logger():
     # create logger name 'logtool'
     logger = logging.getLogger("logtool")
 
-    # setup level to INFO
-    logger.setLevel(logging.INFO)
+    # choose level arcoding to json config file
+    config = load_config("config.json")
+    log_level = config["log_level"]
+
+    if log_level == "DEBUG":
+        logger.setLevel(logging.DEBUG)
+
+    elif log_level == "INFO":
+        logger.setLevel(logging.INFO)
+
+    elif log_level == "WARNING":
+        logger.setLevel(logging.WARNING)
+
+    elif log_level == "ERROR":
+        logger.setLevel(logging.ERROR)
+
+    else:
+        logger.setLevel(logging.INFO)
 
     # avoid duplicate
     if not logger.handlers:
