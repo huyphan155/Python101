@@ -1,5 +1,6 @@
 import logging
 from .config_loader import load_config
+from .config_loader import get_log_level
 
 def setup_logger():
     # create logger name 'logtool'
@@ -7,7 +8,7 @@ def setup_logger():
 
     # choose level arcoding to json config file
     config = load_config("config.json")
-    log_level = config["log_level"]
+    log_level = get_log_level(config)
 
     if log_level == "DEBUG":
         logger.setLevel(logging.DEBUG)
