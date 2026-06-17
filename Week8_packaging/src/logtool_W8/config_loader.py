@@ -1,5 +1,9 @@
 import json
 import os
+# load from .evn
+from dotenv import load_dotenv
+
+load_dotenv()
 
 def load_config(path):
     with open(path, "r") as file:
@@ -20,11 +24,9 @@ def get_api_url(config):
         or config.get("api_url")
     )
 
+def get_token_(config):
 
-config = {
-    "log_level": "WARNING"
-}
-
-print(
-    get_log_level(config)
-)
+    return (
+        os.getenv("API_TOKEN")
+        or config.get("api_token")
+    )
